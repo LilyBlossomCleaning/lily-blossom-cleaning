@@ -2,7 +2,7 @@ import '../../globals.css';
 import type { Metadata } from 'next';
 import Navbar from '@/components/Navbar';
 import appConfig from '../../../app-config.json';
-import { Merriweather } from '@next/font/google';
+import { Merriweather } from "next/font/google";
 
 const merriweather = Merriweather({
   subsets: ['latin'],
