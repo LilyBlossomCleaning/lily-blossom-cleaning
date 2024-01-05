@@ -1,8 +1,9 @@
+import Footer from '@/components/Footer';
 import '../../globals.css';
 import type { Metadata } from 'next';
 import Navbar from '@/components/Navbar';
 import appConfig from '../../../app-config.json';
-import { Merriweather } from "next/font/google";
+import { Merriweather } from 'next/font/google';
 
 const merriweather = Merriweather({
   subsets: ['latin'],
@@ -11,8 +12,8 @@ const merriweather = Merriweather({
 });
 
 export const metadata: Metadata = {
-  title: appConfig.companyName,
-  description: appConfig.companyDescription,
+  title: appConfig.organizationData.name,
+  description: appConfig.organizationData.description,
   keywords: appConfig.seoKeywords,
 };
 
@@ -32,6 +33,7 @@ export default function RootLayout({
       <body>
         <Navbar />
         {children}
+        <Footer organization={appConfig.organizationData} />
       </body>
     </html>
   );

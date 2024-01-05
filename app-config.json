@@ -1,6 +1,33 @@
 {
-  "companyName": "Lily Blossom Cleaning",
-  "companyDescription": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+  "organizationData": {
+    "name": "Lily Blossom Cleaning",
+    "slogan": "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+    "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+    "phoneNumber": "321-258-5438",
+    "email": "lilyblossomcleaning@gmail.com",
+    "operatingSchedule": {
+      "fridayHours": "9am - 5pm",
+      "thursdayHours": "9am - 5pm",
+      "tuesdayHours": "9am - 5pm",
+      "sundayHours": "9am - 5pm",
+      "mondayHours": "9am - 5pm",
+      "saturdayHours": "9am - 5pm",
+      "wednesdayHours": "9am - 5pm"
+    },
+    "location": {
+      "state": "Florida",
+      "zipCode": "32907",
+      "city": "Palm Bay",
+      "street": ""
+    },
+    "serviceLocations": {
+      "state": "Florida",
+      "cities": ["Palm Bay", "Melbourne"]
+    },
+    "social": {
+      "facebook": "https://www.facebook.com/profile.php?id=61555047662058"
+    }
+  },
   "seoKeywords": [
     "Cleaning",
     "business",

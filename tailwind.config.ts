@@ -26,7 +26,7 @@ const config: Config = {
           primary: '#C3E2C2', // light green
           secondary: '#DBCC95', // dark gold
           accent: '#CD8D7A', // reddish
-          neutral: '#FBF6EE', // cream
+          neutral: '#F9EFE8', // cream
           'base-100': '#ffffff',
 
           '--rounded-box': '1rem', // border radius rounded-box utility class, used in card and other large boxes
