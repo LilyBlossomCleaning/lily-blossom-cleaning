@@ -1,8 +1,8 @@
 import Link from 'next/link';
 import { OrganizationData } from '../_types';
-import Image from 'next/image';
 import { FiPhone, FiFacebook } from 'react-icons/fi';
 import { MdOutlineEmail } from 'react-icons/md';
+import LogoIcon from '@/components/LogoIcon';
 
 type Props = {
   organization: OrganizationData;
@@ -12,16 +12,7 @@ const Footer = ({ organization }: Props) => {
   return (
     <footer className="footer p-8 lg:p-10 bg-neutral text-neutral-content">
       <aside>
-        <div className="w-[104px] h-[104px] rounded-full bg-secondary relative">
-          <Image
-            src={'/images/icon.png'}
-            alt={`${organization.name} company logo.`}
-            priority
-            width={100}
-            height={100}
-            className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2"
-          />
-        </div>
+        <LogoIcon width={100} height={100} />
         <p>
           {organization.name}
           <br />

@@ -3,12 +3,18 @@ import '../../globals.css';
 import type { Metadata } from 'next';
 import Navbar from '@/components/Navbar/Navbar';
 import appConfig from '../../../app-config.json';
-import { Merriweather } from 'next/font/google';
+import { Merriweather, Allura } from 'next/font/google';
 
 const merriweather = Merriweather({
   subsets: ['latin'],
   weight: ['400', '700'],
   variable: '--font-merriweather',
+});
+
+const allura = Allura({
+  subsets: ['latin'],
+  weight: ['400'],
+  variable: '--font-allura',
 });
 
 export const metadata: Metadata = {
@@ -26,7 +32,7 @@ export default function RootLayout({
     <html
       lang="en"
       className={
-        `${merriweather.variable} font-sans ` +
+        `${merriweather.variable} ${allura.variable} font-sans ` +
         'bg-gradient-to-b from-base-100 to-neutral'
       }
     >

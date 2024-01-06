@@ -15,6 +15,7 @@ const config: Config = {
       },
       fontFamily: {
         sans: ['var(--font-merriweather)'],
+        allura: ['var(--font-allura)'],
       },
     },
   },

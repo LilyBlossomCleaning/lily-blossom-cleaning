@@ -1,6 +1,7 @@
 'use client';
 import { ChangeEvent, useState } from 'react';
 import NavButtonMobile from './NavButtonMobile';
+import appConfig from '../../../app-config.json';
 
 type Props = {
   children: React.ReactNode;
@@ -23,9 +24,11 @@ const Navbar = ({ children }: Props) => {
       />
       <div className="drawer-content flex flex-col">
         {/* Navbar */}
-        <div className="w-full navbar fixed glass z-50">
+        <div className="w-full navbar fixed glass z-50 grid grid-flow-col justify-between pr-4 lg:pr-2 lg:pl-4">
           <NavButtonMobile isOpen={isSideNavOpen} htmlFor={drawerHtmlFor} />
-          <div className="flex-1 px-2 mx-2">Navbar Title</div>
+          <h1 className="font-allura text-2xl lg:text-4xl">
+            {appConfig.organizationData.name}
+          </h1>
           <div className="flex-none hidden lg:block">
             <ul className="menu menu-horizontal">
               {/* Navbar menu content here */}
