@@ -1,7 +1,7 @@
 import Footer from '@/components/Footer';
 import '../../globals.css';
 import type { Metadata } from 'next';
-import Navbar from '@/components/Navbar';
+import Navbar from '@/components/Navbar/Navbar';
 import appConfig from '../../../app-config.json';
 import { Merriweather } from 'next/font/google';
 
@@ -31,8 +31,7 @@ export default function RootLayout({
       }
     >
       <body>
-        <Navbar />
-        {children}
+        <Navbar>{children}</Navbar>
         <Footer organization={appConfig.organizationData} />
       </body>
     </html>
