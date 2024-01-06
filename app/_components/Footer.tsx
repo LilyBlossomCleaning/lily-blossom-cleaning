@@ -3,6 +3,7 @@ import { OrganizationData } from '../_types';
 import { FiPhone, FiFacebook } from 'react-icons/fi';
 import { MdOutlineEmail } from 'react-icons/md';
 import LogoIcon from '@/components/LogoIcon';
+import appRoutes from '../_lib/routes';
 
 type Props = {
   organization: OrganizationData;
@@ -19,8 +20,18 @@ const Footer = ({ organization }: Props) => {
           {organization.slogan}
         </p>
       </aside>
+      <nav>
+        <header className="footer-title">Helpful Links</header>
+        <div className="grid grid-flow-row gap-2">
+          {appRoutes.map((item) => (
+            <Link key={item.route} href={item.route}>
+              {item.title}
+            </Link>
+          ))}
+        </div>
+      </nav>
       <aside className="grid grid-flow-row gap-8">
-        <nav>
+        <div>
           <header className="footer-title">Social</header>
           <div className="grid grid-flow-col gap-4">
             <Link
@@ -31,7 +42,7 @@ const Footer = ({ organization }: Props) => {
               <FiFacebook />
             </Link>
           </div>
-        </nav>
+        </div>
         <div>
           <header className="footer-title">Contact</header>
           <div className="grid grid-flow-row gap-4">

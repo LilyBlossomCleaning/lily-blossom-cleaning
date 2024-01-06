@@ -26,3 +26,8 @@ export type OrganizationData = {
   name: string;
   email: string;
 };
+
+export type Routes = {
+  title: string;
+  route: string;
+};
