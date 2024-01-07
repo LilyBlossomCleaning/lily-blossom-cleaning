@@ -51,7 +51,7 @@ const Navbar = ({ children }: Props) => {
       />
       <div className="drawer-content flex flex-col">
         {/* Navbar */}
-        <div className="w-full navbar fixed glass shadow-lg z-50 grid grid-flow-col justify-between pr-4 lg:pr-2 lg:pl-4">
+        <div className="w-full navbar fixed glass z-50 grid grid-flow-col justify-between pr-4 lg:pr-2 lg:pl-4">
           <NavButtonMobile isOpen={isSideNavOpen} htmlFor={drawerHtmlFor} />
           <h1 className="font-allura text-2xl lg:text-4xl">
             {appConfig.organizationData.name}
@@ -72,7 +72,7 @@ const Navbar = ({ children }: Props) => {
           aria-label="close sidebar"
           className="drawer-overlay"
         ></label>
-        <ul className="menu p-4 w-80 min-h-full bg-neutral text-4xl justify-center gap-8">
+        <ul className="menu p-4 w-full max-w-lg min-h-full bg-neutral text-4xl justify-center gap-8">
           {/* Sidebar content here */}
           {routeElements}
         </ul>
