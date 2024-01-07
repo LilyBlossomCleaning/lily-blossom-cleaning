@@ -9,13 +9,18 @@ function HomeHero({}: Props) {
       }}
     >
       <div className="hero-overlay bg-opacity-60"></div>
-      <div className="hero-content text-center text-neutral-content">
+      <div className="hero-content text-neutral-content text-center">
         <div className="max-w-md">
-          <h1 className="font-allura mb-5 text-6xl lg:text-8xl">Hello there</h1>
-          <p className="mb-5">
-            Provident cupiditate voluptatem et in. Quaerat fugiat ut assumenda
-            excepturi exercitationem quasi. In deleniti eaque aut repudiandae et
-            a id nisi.
+          <h1 className="font-allura mb-5 text-7xl lg:text-8xl">
+            Fresh
+            <br />
+            Clean
+            <br />
+            Renewing
+          </h1>
+          <p className="mb-5 prose lg:prose-xl">
+            Experience cleanliness like never before. Let us transform your
+            space into a flourishing oasis of freshness.
           </p>
           <button className="btn btn-primary">Get Started</button>
         </div>
