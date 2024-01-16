@@ -17,8 +17,8 @@ type Props = {};
 export default function page({}: Props) {
   return (
     <>
-      <main className="relative flex min-h-screen flex-col items-center justify-between">
-        <div
+      <div className="relative flex min-h-screen flex-col items-center justify-between">
+        <main
           className="hero min-h-screen relative"
           style={{
             backgroundImage: 'url(/images/contact-main.jpg)',
@@ -39,7 +39,7 @@ export default function page({}: Props) {
             </div>
           </div>
           <div className="absolute bottom-0 w-full h-40 bg-gradient-to-b from-transparent to-white"></div>
-        </div>
+        </main>
         <div className="relative w-full bg-white">
           <div className="grid gap-12 lg:gap-24 pb-8 px-4 lg:pb-24">
             <section className="prose xl:prose-xl card glass shadow-md -mt-28 lg:-mt-32 mx-auto">
@@ -83,13 +83,15 @@ export default function page({}: Props) {
                 </form>
               </div>
             </section>
-            <MoreWaysToConnect
-              email={appConfig.organizationData.email}
-              phoneNumber={appConfig.organizationData.phoneNumber}
-            />
           </div>
         </div>
-      </main>
+      </div>
+      <aside className="bg-white pb-24 px-4">
+        <MoreWaysToConnect
+          email={appConfig.organizationData.email}
+          phoneNumber={appConfig.organizationData.phoneNumber}
+        />
+      </aside>
     </>
   );
 }
