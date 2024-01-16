@@ -9,13 +9,16 @@
     "lint": "next lint"
   },
   "dependencies": {
+    "@react-email/components": "0.0.12",
     "@sanity/image-url": "^1.0.2",
     "@sanity/vision": "^3.24.1",
+    "dayjs": "^1.11.10",
     "hamburger-react": "^2.5.0",
     "next": "14.0.4",
     "next-sanity": "^7.0.10",
     "react": "^18",
     "react-dom": "^18",
+    "react-email": "^1.10.0",
     "react-icons": "^4.12.0",
     "resend": "^2.1.0",
     "sanity": "^3.24.1",

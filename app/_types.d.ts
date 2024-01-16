@@ -31,3 +31,15 @@ export type Routes = {
   title: string;
   route: string;
 };
+
+export interface ContactUsRequest extends ContactUsFormContent {
+  orgInfo: OrganizationData;
+  timestampMs?: number;
+}
+
+export interface ContactUsFormContent {
+  firstName: string;
+  lastName: string;
+  senderEmail: string;
+  phoneNumber: string;
+}
