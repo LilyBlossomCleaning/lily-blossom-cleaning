@@ -49,7 +49,7 @@ export default function page({}: Props) {
                     Your Info
                   </h3>
                   <p className="text-sm">
-                    Please fill in your information and we'll be happy to
+                    Please fill in your information and we&apos;ll be happy to
                     respond to you soon!
                   </p>
                 </span>
