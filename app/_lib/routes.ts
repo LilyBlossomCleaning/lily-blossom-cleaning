@@ -6,20 +6,12 @@ const appRoutes: Routes[] = [
     route: '/',
   },
   {
-    title: 'Services',
-    route: '/services',
-  },
-  {
     title: 'About',
     route: '/about',
   },
   {
-    title: 'Gallery',
-    route: '/gallery',
-  },
-  {
-    title: 'Blogs',
-    route: '/blogs',
+    title: 'Services',
+    route: '/services',
   },
   {
     title: 'Contact',

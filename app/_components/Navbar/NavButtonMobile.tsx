@@ -8,7 +8,7 @@ type Props = {
 
 const NavButtonMobile = ({ isOpen, htmlFor }: Props) => {
   return (
-    <div className="flex-none lg:hidden">
+    <div className="flex-none lg:hidden focus:outline-none">
       <label
         htmlFor={htmlFor}
         aria-label="open sidebar"
