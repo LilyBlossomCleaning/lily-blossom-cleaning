@@ -6,10 +6,12 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "lint": "next lint"
+    "lint": "next lint",
+    "email": "email dev --dir emails"
   },
   "dependencies": {
     "@react-email/components": "0.0.12",
+    "@react-email/render": "^0.0.11",
     "@sanity/image-url": "^1.0.2",
     "@sanity/vision": "^3.24.1",
     "dayjs": "^1.11.10",

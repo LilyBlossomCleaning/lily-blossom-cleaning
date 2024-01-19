@@ -1,7 +1,7 @@
 import { MoreWaysToConnect } from '@/components/Contact/MoreWaysToConnect';
-import { MdArrowRightAlt } from 'react-icons/md';
 import appConfig from '../../../../app-config.json';
 import { Metadata } from 'next';
+import FormSubmitButton from '@/app/_components/Buttons/FormSubmitButton';
 
 export const metadata: Metadata = {
   title: 'Contact Us | ' + appConfig.organizationData.name,
@@ -10,6 +10,15 @@ export const metadata: Metadata = {
   Please fill out the information below and we will get back to you soon!
   More ways to react out to us: Give us a call at ${appConfig.organizationData.phoneNumber}, or email us at ${appConfig.organizationData.email}`,
   keywords: appConfig.seoKeywords,
+};
+
+const sendEmail = async (formData: FormData) => {
+  'use server';
+  console.log(formData);
+  // const { data, error } = await sendContactUsEmail(
+  //   formData,
+  //   appConfig.organizationData
+  // );
 };
 
 type Props = {};
@@ -53,33 +62,69 @@ export default function page({}: Props) {
                     respond to you soon!
                   </p>
                 </span>
-                <form className="grid grid-flow-row gap-8 lg:grid-cols-2">
-                  <input
-                    type="text"
-                    placeholder="First Name"
-                    className="input input-bordered input-primary w-full max-w-xs"
-                  />
-                  <input
-                    type="text"
-                    placeholder="Last Name"
-                    className="input input-bordered input-primary w-full max-w-xs"
-                  />
-                  <input
-                    type="text"
-                    placeholder="Phone Number"
-                    className="input input-bordered input-primary w-full max-w-xs"
-                  />
-                  <input
-                    type="text"
-                    placeholder="Email"
-                    className="input input-bordered input-primary w-full max-w-xs"
-                  />
-                  <button className="btn btn-accent">
+                <form
+                  action={sendEmail}
+                  className="grid grid-flow-row gap-8 lg:grid-cols-2"
+                >
+                  <span>
+                    <div className="label">
+                      <label htmlFor="firstName" className="label-text">
+                        First Name
+                      </label>
+                    </div>
+                    <input
+                      id="firstName"
+                      name="firstName"
+                      type="text"
+                      placeholder="First Name"
+                      className="input input-bordered input-primary w-full max-w-xs"
+                    />
+                  </span>
+                  <span>
+                    <div className="label">
+                      <label htmlFor="lastName" className="label-text">
+                        Last Name
+                      </label>
+                    </div>
+                    <input
+                      id="lastName"
+                      name="lastName"
+                      type="text"
+                      placeholder="Last Name"
+                      className="input input-bordered input-primary w-full max-w-xs"
+                    />
+                  </span>
+                  <span>
+                    <div className="label">
+                      <label htmlFor="phoneNumber" className="label-text">
+                        Phone Number
+                      </label>
+                    </div>
+                    <input
+                      id="phoneNumber"
+                      name="phoneNumber"
+                      type="text"
+                      placeholder="Phone Number"
+                      className="input input-bordered input-primary w-full max-w-xs"
+                    />
+                  </span>
+                  <span>
+                    <div className="label">
+                      <label htmlFor="email" className="label-text">
+                        Email
+                      </label>
+                    </div>
+                    <input
+                      id="email"
+                      name="email"
+                      type="text"
+                      placeholder="Email"
+                      className="input input-bordered input-primary w-full max-w-xs"
+                    />
+                  </span>
+                  <FormSubmitButton className="btn-accent">
                     Send
-                    <span className="text-2xl">
-                      <MdArrowRightAlt />
-                    </span>
-                  </button>
+                  </FormSubmitButton>
                 </form>
               </div>
             </section>

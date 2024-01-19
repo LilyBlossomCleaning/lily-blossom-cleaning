@@ -11,7 +11,7 @@ import {
   validateString,
 } from '@/lib/Validation/FormValidation';
 import { OrganizationData } from '@/app/_types';
-import ContactUsForm from '@/components/Email/ContactUsForm';
+import ContactUsForm from '@/emails/ContactUsForm';
 
 const resend = new Resend(process.env.RESEND_API_KEY);
 const to = process.env.EMAIL_TO;
