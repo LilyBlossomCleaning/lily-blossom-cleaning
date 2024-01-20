@@ -1,7 +1,7 @@
 import { MoreWaysToConnect } from '@/components/Contact/MoreWaysToConnect';
-import { MdArrowRightAlt } from 'react-icons/md';
 import appConfig from '../../../../app-config.json';
 import { Metadata } from 'next';
+import ContactUsForm from '@/components/Contact/ContactUsForm';
 
 export const metadata: Metadata = {
   title: 'Contact Us | ' + appConfig.organizationData.name,
@@ -12,9 +12,7 @@ export const metadata: Metadata = {
   keywords: appConfig.seoKeywords,
 };
 
-type Props = {};
-
-export default function page({}: Props) {
+export default function page() {
   return (
     <>
       <div className="relative flex min-h-screen flex-col items-center justify-between">
@@ -53,34 +51,7 @@ export default function page({}: Props) {
                     respond to you soon!
                   </p>
                 </span>
-                <form className="grid grid-flow-row gap-8 lg:grid-cols-2">
-                  <input
-                    type="text"
-                    placeholder="First Name"
-                    className="input input-bordered input-primary w-full max-w-xs"
-                  />
-                  <input
-                    type="text"
-                    placeholder="Last Name"
-                    className="input input-bordered input-primary w-full max-w-xs"
-                  />
-                  <input
-                    type="text"
-                    placeholder="Phone Number"
-                    className="input input-bordered input-primary w-full max-w-xs"
-                  />
-                  <input
-                    type="text"
-                    placeholder="Email"
-                    className="input input-bordered input-primary w-full max-w-xs"
-                  />
-                  <button className="btn btn-accent">
-                    Send
-                    <span className="text-2xl">
-                      <MdArrowRightAlt />
-                    </span>
-                  </button>
-                </form>
+                <ContactUsForm />
               </div>
             </section>
           </div>
