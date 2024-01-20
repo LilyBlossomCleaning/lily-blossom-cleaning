@@ -39,6 +39,7 @@ export const isValidName = (name: string): boolean => {
 };
 
 export const phoneNumberInputProps = {
+  minLength: 10,
   maxLength: 13,
 };
 
@@ -49,6 +50,7 @@ export const isValidPhoneNumber = (
   return (
     !!pn &&
     pn.length <= phoneNumberInputProps.maxLength &&
+    pn.length >= phoneNumberInputProps.minLength &&
     !!pn.match(phoneNumberRegex)
   );
 };

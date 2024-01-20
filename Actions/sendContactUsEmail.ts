@@ -3,6 +3,7 @@
 import React from 'react';
 import { Resend } from 'resend';
 import {
+  additionalInfoInputProps,
   emailInputProps,
   getErrorMessage,
   isValidEmail,
@@ -25,6 +26,7 @@ export const sendContactUsEmail = async (
   const lastName = formData.get('lastName');
   const senderEmail = formData.get('senderEmail');
   const phoneNumber = formData.get('phoneNumber');
+  const additionalInfo = formData.get('additionalInfo');
 
   // simple server-side validation
   if (!to || !from) {
@@ -54,6 +56,14 @@ export const sendContactUsEmail = async (
       error: 'Invalid phone number',
     };
   }
+  if (
+    additionalInfo &&
+    !validateString(additionalInfo, additionalInfoInputProps.maxLength)
+  ) {
+    return {
+      error: 'Invalid additional info',
+    };
+  }
 
   let data;
   try {
@@ -67,6 +77,7 @@ export const sendContactUsEmail = async (
         lastName,
         senderEmail,
         phoneNumber: phoneNumber as string,
+        additionalInfo: additionalInfo || '',
         orgInfo,
       }),
     });

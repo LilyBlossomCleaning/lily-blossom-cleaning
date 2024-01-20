@@ -1,7 +1,7 @@
 import { MoreWaysToConnect } from '@/components/Contact/MoreWaysToConnect';
 import appConfig from '../../../../app-config.json';
 import { Metadata } from 'next';
-import FormSubmitButton from '@/app/_components/Buttons/FormSubmitButton';
+import ContactUsForm from '@/components/Contact/ContactUsForm';
 
 export const metadata: Metadata = {
   title: 'Contact Us | ' + appConfig.organizationData.name,
@@ -62,70 +62,7 @@ export default function page({}: Props) {
                     respond to you soon!
                   </p>
                 </span>
-                <form
-                  action={sendEmail}
-                  className="grid grid-flow-row gap-8 lg:grid-cols-2"
-                >
-                  <span>
-                    <div className="label">
-                      <label htmlFor="firstName" className="label-text">
-                        First Name
-                      </label>
-                    </div>
-                    <input
-                      id="firstName"
-                      name="firstName"
-                      type="text"
-                      placeholder="First Name"
-                      className="input input-bordered input-primary w-full max-w-xs"
-                    />
-                  </span>
-                  <span>
-                    <div className="label">
-                      <label htmlFor="lastName" className="label-text">
-                        Last Name
-                      </label>
-                    </div>
-                    <input
-                      id="lastName"
-                      name="lastName"
-                      type="text"
-                      placeholder="Last Name"
-                      className="input input-bordered input-primary w-full max-w-xs"
-                    />
-                  </span>
-                  <span>
-                    <div className="label">
-                      <label htmlFor="phoneNumber" className="label-text">
-                        Phone Number
-                      </label>
-                    </div>
-                    <input
-                      id="phoneNumber"
-                      name="phoneNumber"
-                      type="text"
-                      placeholder="Phone Number"
-                      className="input input-bordered input-primary w-full max-w-xs"
-                    />
-                  </span>
-                  <span>
-                    <div className="label">
-                      <label htmlFor="email" className="label-text">
-                        Email
-                      </label>
-                    </div>
-                    <input
-                      id="email"
-                      name="email"
-                      type="text"
-                      placeholder="Email"
-                      className="input input-bordered input-primary w-full max-w-xs"
-                    />
-                  </span>
-                  <FormSubmitButton className="btn-accent">
-                    Send
-                  </FormSubmitButton>
-                </form>
+                <ContactUsForm sendEmail={sendEmail} />
               </div>
             </section>
           </div>

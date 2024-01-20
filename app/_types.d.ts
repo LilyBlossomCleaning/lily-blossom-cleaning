@@ -37,9 +37,21 @@ export interface ContactUsRequest extends ContactUsFormContent {
   timestampMs?: number;
 }
 
+export interface ConnectedFormInput {
+  name: string;
+  label?: string;
+  placeholder?: string;
+  className?: string;
+  inputClassName?: string;
+  required?: boolean;
+  minLength?: number;
+  maxLength?: number;
+}
+
 export interface ContactUsFormContent {
   firstName: string;
   lastName: string;
   senderEmail: string;
   phoneNumber: string;
+  additionalInfo?: string;
 }

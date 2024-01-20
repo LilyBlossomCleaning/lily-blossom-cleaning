@@ -31,6 +31,13 @@ export default function ContactUsForm(props: ContactUsRequest) {
               </Text>
               <Text>Email: {props?.senderEmail}</Text>
               <Text>Phone: {props?.phoneNumber}</Text>
+              {!!props?.additionalInfo && (
+                <Text>
+                  Additional Info:
+                  <br />
+                  {props?.additionalInfo}
+                </Text>
+              )}
               <Hr />
               <Text>The sender&apos;s email is: {props?.senderEmail}</Text>
             </Section>
