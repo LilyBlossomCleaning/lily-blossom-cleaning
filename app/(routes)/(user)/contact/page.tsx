@@ -12,18 +12,7 @@ export const metadata: Metadata = {
   keywords: appConfig.seoKeywords,
 };
 
-const sendEmail = async (formData: FormData) => {
-  'use server';
-  console.log(formData);
-  // const { data, error } = await sendContactUsEmail(
-  //   formData,
-  //   appConfig.organizationData
-  // );
-};
-
-type Props = {};
-
-export default function page({}: Props) {
+export default function page() {
   return (
     <>
       <div className="relative flex min-h-screen flex-col items-center justify-between">
@@ -62,7 +51,7 @@ export default function page({}: Props) {
                     respond to you soon!
                   </p>
                 </span>
-                <ContactUsForm sendEmail={sendEmail} />
+                <ContactUsForm />
               </div>
             </section>
           </div>

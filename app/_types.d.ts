@@ -46,6 +46,8 @@ export interface ConnectedFormInput {
   required?: boolean;
   minLength?: number;
   maxLength?: number;
+  value?: string | number;
+  onChange?: ChangeEventHandler<HTMLInputElement> | undefined;
 }
 
 export interface ContactUsFormContent {

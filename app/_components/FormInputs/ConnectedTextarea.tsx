@@ -1,5 +1,4 @@
 import { ConnectedFormInput } from '@/app/_types';
-import { useState } from 'react';
 import { useFormStatus } from 'react-dom';
 
 function ConnectedTextarea({
@@ -10,9 +9,10 @@ function ConnectedTextarea({
   inputClassName,
   maxLength,
   required,
+  value,
+  onChange,
 }: ConnectedFormInput) {
   const { pending } = useFormStatus();
-  const [count, setCount] = useState(0);
   return (
     <span className={className}>
       <div className="label">
@@ -23,15 +23,18 @@ function ConnectedTextarea({
       <textarea
         id={name}
         name={name}
+        value={value}
+        onChange={onChange}
         maxLength={maxLength}
         placeholder={placeholder}
         className={`textarea ${inputClassName}`}
-        onChange={(e) => setCount(e.target.value.length)}
         disabled={pending}
         required={required}
       ></textarea>
       <div className="label pt-0">
-        <span className="label-text-alt">{`${count} / ${maxLength}`}</span>
+        <span className="label-text-alt">{`${
+          value?.toString().length
+        } / ${maxLength}`}</span>
       </div>
     </span>
   );

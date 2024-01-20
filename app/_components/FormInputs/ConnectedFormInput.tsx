@@ -10,6 +10,8 @@ function FormInput({
   minLength,
   maxLength,
   required,
+  value,
+  onChange,
 }: ConnectedFormInput) {
   const { pending } = useFormStatus();
   return (
@@ -23,6 +25,8 @@ function FormInput({
         id={name}
         name={name}
         type="text"
+        value={value}
+        onChange={onChange}
         required={required}
         placeholder={placeholder}
         className={`input input-bordered ${inputClassName}`}
