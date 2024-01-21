@@ -76,8 +76,8 @@ const ContactUsForm = () => {
           name="firstName"
           label="First Name"
           placeholder="First Name"
-          className="w-full max-w-xs col-span-1"
-          inputClassName="input-primary"
+          className="w-full col-span-1"
+          inputClassName="input-primary w-full"
           minLength={nameInputProps.minLength}
           maxLength={nameInputProps.maxLength}
           required
@@ -88,8 +88,8 @@ const ContactUsForm = () => {
           name="lastName"
           label="Last Name"
           placeholder="Last Name"
-          className="w-full max-w-xs col-span-1"
-          inputClassName="input-primary"
+          className="w-full col-span-1"
+          inputClassName="input-primary w-full"
           minLength={nameInputProps.minLength}
           maxLength={nameInputProps.maxLength}
           required
@@ -100,8 +100,8 @@ const ContactUsForm = () => {
           name="phoneNumber"
           label="Phone Number"
           placeholder="Phone Number"
-          className="w-full max-w-xs col-span-1"
-          inputClassName="input-primary"
+          className="w-full col-span-1"
+          inputClassName="input-primary w-full"
           minLength={phoneNumberInputProps.minLength}
           maxLength={phoneNumberInputProps.maxLength}
           required
@@ -112,8 +112,8 @@ const ContactUsForm = () => {
           name="senderEmail"
           label="Email"
           placeholder="Email"
-          className="w-full max-w-xs col-span-1"
-          inputClassName="input-primary"
+          className="w-full col-span-1"
+          inputClassName="input-primary w-full"
           minLength={emailInputProps.minLength}
           maxLength={emailInputProps.maxLength}
           required

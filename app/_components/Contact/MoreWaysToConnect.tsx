@@ -29,7 +29,7 @@ export function MoreWaysToConnect({ email, phoneNumber }: Props) {
             <span className="text-4xl lg:text-5xl w-fit">
               <MdOutlineEmail />
             </span>
-            <span className="w-fit text-xs lg:text-base">{email}</span>
+            <span className="w-fit text-xs md:text-base">{email}</span>
           </Link>
         </div>
       </div>
