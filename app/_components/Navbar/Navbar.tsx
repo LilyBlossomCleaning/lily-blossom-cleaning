@@ -1,5 +1,5 @@
 'use client';
-import { ChangeEvent, useState } from 'react';
+import { ChangeEvent, useEffect, useState } from 'react';
 import NavButtonMobile from './NavButtonMobile';
 import appConfig from '../../../app-config.json';
 import appRoutes from '@/app/_lib/routes';
@@ -18,6 +18,12 @@ const Navbar = ({ children }: Props) => {
   };
 
   const pathname = usePathname();
+
+  useEffect(() => {
+    if (isSideNavOpen) {
+      document?.getElementById(drawerHtmlFor)?.click();
+    }
+  }, [pathname]);
 
   const isActiveRoute = (route: string, exact = false) => {
     if (exact) {
