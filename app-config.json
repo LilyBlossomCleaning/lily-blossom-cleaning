@@ -1,7 +1,7 @@
 {
   "organizationData": {
     "name": "Lily Blossom Cleaning",
-    "slogan": "Experience the Lily Blossom Clean",
+    "slogan": "Promoting well-being through meticulous cleaning services",
     "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
     "phoneNumber": "321-258-5438",
     "email": "lilyblossomcleaning@gmail.com",
@@ -26,7 +26,13 @@
     },
     "social": {
       "facebook": "https://www.facebook.com/profile.php?id=61555047662058"
-    }
+    },
+    "coreValues": [
+      "Integrity: Upholding honesty and transparency in all our interactions.",
+      "Excellence: Striving for the highest standards in cleanliness and service.",
+      "Respect: Valuing our clients, team members, and the spaces we clean.",
+      "Innovation: Embracing creative solutions for effective cleaning."
+    ]
   },
   "seoKeywords": [
     "Cleaning",
