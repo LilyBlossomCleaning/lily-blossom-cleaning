@@ -33,7 +33,7 @@ export default function page() {
                 {appConfig.organizationData.name}
               </h1>
               <p className="mb-5 prose lg:prose-xl text-sm italic">
-                &quot{appConfig.organizationData.slogan}&quot
+                &quot;{appConfig.organizationData.slogan}&quot;
               </p>
             </div>
           </div>
