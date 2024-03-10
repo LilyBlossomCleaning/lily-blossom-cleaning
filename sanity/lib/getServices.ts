@@ -1,17 +1,22 @@
 import { Service } from '@/app/_types';
 import { client } from './client';
 
-export default async function getStaffMembers(): Promise<Service[]> {
+function compareNumbers(a: Service, b: Service) {
+  return a.propertySizeSqFt - b.propertySizeSqFt;
+}
+
+export default async function getServices(): Promise<Service[]> {
   const query = `*[_type == "service"] {
     _id,
     name,
     slug,
     image,
     description,
-    propertySize,
+    propertySizeSqFt,
     priceRange,
     completionTime,
     }`;
-  const services = await client.fetch(query);
+  const services: Service[] = await client.fetch(query);
+  services.sort(compareNumbers);
   return services;
 }

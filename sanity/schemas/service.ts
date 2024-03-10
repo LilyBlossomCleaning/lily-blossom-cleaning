@@ -50,10 +50,10 @@ export default defineType({
       ],
     }),
     defineField({
-      name: 'propertySize',
-      title: 'Property Size',
-      type: 'string',
-      description: 'Example: 1,500 sq.ft.',
+      name: 'propertySizeSqFt',
+      title: 'Property Size Sq. Ft.',
+      type: 'number',
+      description: '1500',
     }),
     defineField({
       name: 'priceRange',
