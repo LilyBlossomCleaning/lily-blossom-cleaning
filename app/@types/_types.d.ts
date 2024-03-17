@@ -64,6 +64,7 @@ export interface Service {
   name: string;
   slug: string;
   image: Image;
+  summary: ArraySchemaType<BlockSchemaType>;
   description: ArraySchemaType<BlockSchemaType>;
   propertySizeSqFt: number;
   priceRange: string;

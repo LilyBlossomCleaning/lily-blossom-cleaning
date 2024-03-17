@@ -1,4 +1,4 @@
-import { Service } from '@/app/_types';
+import { Service } from '@/app/@types/_types';
 import { client } from './client';
 
 function compareNumbers(a: Service, b: Service) {
@@ -11,6 +11,7 @@ export default async function getServices(): Promise<Service[]> {
     name,
     slug,
     image,
+    summary,
     description,
     propertySizeSqFt,
     priceRange,

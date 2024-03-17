@@ -11,7 +11,7 @@ import {
   Text,
 } from '@react-email/components';
 import { Tailwind } from '@react-email/tailwind';
-import { ContactUsRequest } from '@/app/_types';
+import { ContactUsRequest } from '@/app/@types/_types';
 
 export default function ContactUsForm(props: ContactUsRequest) {
   return (

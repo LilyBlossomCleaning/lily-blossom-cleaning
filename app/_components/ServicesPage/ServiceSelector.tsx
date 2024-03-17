@@ -1,6 +1,6 @@
 'use client';
 
-import { Service } from '@/app/_types';
+import { Service } from '@/app/@types/_types';
 import sanityUrlFor from '@/sanity/lib/sanityUrlFor';
 import Image from 'next/image';
 import { ChangeEvent, useState } from 'react';
@@ -42,7 +42,10 @@ const ServiceSelector = ({ services }: Props) => {
         <div className="label">
           <span className="label-text">Choose the size of your property</span>
         </div>
-        <select onChange={handleChange} className="select select-bordered">
+        <select
+          onChange={handleChange}
+          className="select select-bordered select-lg"
+        >
           {servicesWithRanges.map((opt) => (
             <option key={opt.name}>{opt.range}</option>
           ))}
@@ -65,7 +68,7 @@ const ServiceSelector = ({ services }: Props) => {
           <span className="text-sm font-light">
             Estimated price: {selectedOption.priceRange}
           </span>
-          <BlockContent blocks={selectedOption.description} />
+          <BlockContent blocks={selectedOption.summary} />
           <div className="card-actions justify-end">
             <button className="btn btn-primary">Learn More</button>
           </div>

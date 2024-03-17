@@ -9,7 +9,7 @@ import {
   nameInputProps,
   phoneNumberInputProps,
 } from '@/app/_lib/Validation/FormValidation';
-import { ContactUsFormContent } from '@/app/_types';
+import { ContactUsFormContent } from '@/app/@types/_types';
 import { useState } from 'react';
 import { sendContactUsEmail } from '@/Actions/sendContactUsEmail';
 import appConfig from '../../../app-config.json';

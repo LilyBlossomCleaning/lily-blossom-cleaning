@@ -39,7 +39,18 @@ export default function page() {
           </div>
           <div className="absolute bottom-0 w-full h-40 bg-gradient-to-b from-transparent to-white"></div>
         </main>
-        <section className="relative w-full bg-white py-20">
+        <section className="relative grid gap-12 w-full bg-white py-20">
+          <div className="prose xl:prose-xl mx-auto pt-16 pb-28 px-8">
+            <h3>Bespoke Cleaning Services for Every Space</h3>
+            <p>
+              We&apos;re not just about cleaning; we&apos;re about creating
+              experiences that breathe life into your home. Our comprehensive
+              services are crafted with care, precision, and a deep
+              understanding of what it means to truly cleanse. Let&apos;s make
+              every square foot of your space a testament to our dedication to
+              excellence.
+            </p>
+          </div>
           <div className="mx-auto max-w-4xl grid justify-items-center gap-8">
             <ServiceSelector services={services} />
           </div>

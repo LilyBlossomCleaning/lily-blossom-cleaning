@@ -37,9 +37,24 @@ export default defineType({
       ],
     }),
     defineField({
+      name: 'summary',
+      title: 'Summary',
+      type: 'array',
+      description: 'Brief summary of the service.',
+      of: [
+        {
+          title: 'Block',
+          type: 'block',
+          styles: [{ title: 'Normal', value: 'normal' }],
+          lists: [],
+        },
+      ],
+    }),
+    defineField({
       name: 'description',
       title: 'Description',
       type: 'array',
+      description: 'Detailed description of the service.',
       of: [
         {
           title: 'Block',

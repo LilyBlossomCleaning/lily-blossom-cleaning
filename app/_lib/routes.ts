@@ -1,4 +1,4 @@
-import { Routes } from '../_types';
+import { Routes } from '../@types/_types';
 
 const appRoutes: Routes[] = [
   {
