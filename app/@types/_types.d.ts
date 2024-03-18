@@ -1,3 +1,5 @@
+import { ArraySchemaType, BlockSchemaType, Image } from 'sanity';
+
 export type OrganizationData = {
   operatingSchedule: {
     fridayHours: string;
@@ -56,4 +58,15 @@ export interface ContactUsFormContent {
   senderEmail: string;
   phoneNumber: string;
   additionalInfo?: string;
+}
+
+export interface Service {
+  name: string;
+  slug: string;
+  image: Image;
+  summary: ArraySchemaType<BlockSchemaType>;
+  description: ArraySchemaType<BlockSchemaType>;
+  propertySizeSqFt: number;
+  priceRange: string;
+  completionTime: string;
 }

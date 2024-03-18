@@ -1,4 +1,4 @@
-import { ConnectedFormInput } from '@/app/_types';
+import { ConnectedFormInput } from '@/app/@types/_types';
 import { useFormStatus } from 'react-dom';
 
 function FormInput({

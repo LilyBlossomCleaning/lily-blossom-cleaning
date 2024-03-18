@@ -1,5 +1,5 @@
 import Link from 'next/link';
-import { OrganizationData } from '../_types';
+import { OrganizationData } from '../@types/_types';
 import { FiPhone, FiFacebook } from 'react-icons/fi';
 import { MdOutlineEmail } from 'react-icons/md';
 import LogoIcon from '@/components/LogoIcon';
