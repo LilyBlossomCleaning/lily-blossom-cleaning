@@ -1,4 +1,4 @@
-import { ArraySchemaType, BlockSchemaType, Image } from 'sanity';
+import { ArraySchemaType, BlockSchemaType, Image, Slug } from 'sanity';
 
 export type OrganizationData = {
   operatingSchedule: {
@@ -62,7 +62,7 @@ export interface ContactUsFormContent {
 
 export interface Service {
   name: string;
-  slug: string;
+  slug: Slug;
   image: Image;
   summary: ArraySchemaType<BlockSchemaType>;
   description: ArraySchemaType<BlockSchemaType>;
