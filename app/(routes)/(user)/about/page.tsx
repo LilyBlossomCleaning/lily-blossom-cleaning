@@ -45,7 +45,7 @@ export default function page() {
         <section className="relative w-full bg-neutral py-20">
           <CoreValues />
         </section>
-        <section className="relative w-full bg-accent py-20">
+        <section className="relative w-full bg-primary py-20">
           <div className="prose xl:prose-xl mx-auto w-fit p-8">
             <h3 className="text-2xl !mb-12">Want more information?</h3>
             <p>
@@ -53,7 +53,7 @@ export default function page() {
               answer any questions you have.
             </p>
             <Link href={'/contact'}>
-              <button className="btn btn-secondary">
+              <button className="btn btn-accent">
                 Contact Us
                 <span className="text-2xl">
                   <MdArrowRightAlt />
