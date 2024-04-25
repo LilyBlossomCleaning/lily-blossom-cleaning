@@ -26,7 +26,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   };
 }
 
-export async function page({ params }: Props) {
+export default async function Page({ params }: Props) {
   const data = await getService(params?.slug);
 
   return (
@@ -74,5 +74,3 @@ export async function page({ params }: Props) {
     </>
   );
 }
-
-export default page;
