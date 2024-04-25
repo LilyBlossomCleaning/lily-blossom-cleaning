@@ -5,6 +5,7 @@ import sanityUrlFor from '@/sanity/lib/sanityUrlFor';
 import Image from 'next/image';
 import { ChangeEvent, useState } from 'react';
 import BlockContent from '@sanity/block-content-to-react';
+import LinkButton from '../Buttons/LinkButton';
 
 interface ServiceWithRange extends Service {
   range: string;
@@ -70,7 +71,11 @@ const ServiceSelector = ({ services }: Props) => {
           </span>
           <BlockContent blocks={selectedOption.summary} />
           <div className="card-actions justify-end">
-            <button className="btn btn-primary">Learn More</button>
+            <LinkButton
+              href={`/services/${selectedOption.slug.current}`}
+              label="Learn More"
+              className="btn-primary"
+            />
           </div>
         </div>
       </div>
