@@ -1,3 +1,6 @@
+import getLocationsString from '@/app/_lib/serviceLocationsString';
+import appConfig from '../../../app-config.json';
+
 type Props = {};
 
 function HomeHero({}: Props) {
@@ -19,8 +22,11 @@ function HomeHero({}: Props) {
             Renewing
           </h1>
           <p className="mb-5 prose lg:prose-xl">
-            Experience cleanliness like never before. Let us transform your
-            space into a flourishing oasis of freshness.
+            Making homes beautiful in{' '}
+            {getLocationsString(
+              appConfig.organizationData.serviceLocations.cities
+            )}{' '}
+            since {appConfig.organizationData.originYear}
           </p>
           <button className="btn btn-primary">Get Started</button>
         </div>

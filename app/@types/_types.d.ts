@@ -11,6 +11,7 @@ export type OrganizationData = {
     wednesdayHours: string;
   };
   phoneNumber: string;
+  originYear: string;
   serviceLocations: {
     cities: string[];
     state: string;
