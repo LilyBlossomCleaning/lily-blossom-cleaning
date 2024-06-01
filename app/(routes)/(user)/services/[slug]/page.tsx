@@ -1,5 +1,5 @@
 import appConfig from '../../../../../app-config.json';
-import getServiceDetails from '@/sanity/lib/getServiceDetails';
+import getServiceSelectorDetails from '@/sanity/lib/getServiceSelectorDetails';
 import sanityUrlFor from '@/sanity/lib/sanityUrlFor';
 import BlockContent from '@sanity/block-content-to-react';
 import { Metadata } from 'next';
@@ -8,7 +8,7 @@ import { notFound } from 'next/navigation';
 import { MdArrowRightAlt } from 'react-icons/md';
 
 async function getService(id: string) {
-  const serviceDetails = await getServiceDetails(id);
+  const serviceDetails = await getServiceSelectorDetails(id);
   return serviceDetails;
 }
 

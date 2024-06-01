@@ -71,3 +71,9 @@ export interface Service {
   priceRange: string;
   completionTime: string;
 }
+
+export interface ServiceDetails {
+  name: string;
+  image: Image;
+  description: ArraySchemaType<BlockSchemaType>;
+}

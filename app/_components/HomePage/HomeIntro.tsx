@@ -19,6 +19,26 @@ function HomeIntro({}: Props) {
         </section>
         <section className="card glass">
           <div className="card-body">
+            <h3>Services Offered</h3>
+            <p>
+              From residential sanctuaries to commercial spaces, we offer a
+              spectrum of cleaning services designed to bring the Lily Blossom
+              touch to every environment. Whether it&apos;s a one-time spruce or
+              a regular maintenance plan, let us elevate your space into a haven
+              of cleanliness.
+            </p>
+            <Link href={'/services'}>
+              <button className="btn btn-accent">
+                Services
+                <span className="text-2xl">
+                  <MdArrowRightAlt />
+                </span>
+              </button>
+            </Link>
+          </div>
+        </section>
+        <section className="card glass">
+          <div className="card-body">
             <h3>Our Promise: Blooming Cleanliness</h3>
             <p>
               Step into a world where cleanliness isn&apos;t just a chore;
@@ -49,26 +69,6 @@ function HomeIntro({}: Props) {
                 needs, ensuring a personalized touch in every clean.
               </li>
             </ul>
-          </div>
-        </section>
-        <section className="card glass">
-          <div className="card-body">
-            <h3>Services Offered</h3>
-            <p>
-              From residential sanctuaries to commercial spaces, we offer a
-              spectrum of cleaning services designed to bring the Lily Blossom
-              touch to every environment. Whether it&apos;s a one-time spruce or
-              a regular maintenance plan, let us elevate your space into a haven
-              of cleanliness.
-            </p>
-            <Link href={'/services'}>
-              <button className="btn btn-accent">
-                Services
-                <span className="text-2xl">
-                  <MdArrowRightAlt />
-                </span>
-              </button>
-            </Link>
           </div>
         </section>
         <section className="card glass">
