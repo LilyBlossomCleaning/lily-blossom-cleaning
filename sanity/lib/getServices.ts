@@ -1,23 +1,13 @@
-import { Service } from '@/app/@types/_types';
+import { ServiceDetails } from '@/app/@types/_types';
 import { client } from './client';
 
-function compareNumbers(a: Service, b: Service) {
-  return a.propertySizeSqFt - b.propertySizeSqFt;
-}
-
-export default async function getServices(): Promise<Service[]> {
-  const query = `*[_type == "service"] {
+export default async function getServices(): Promise<ServiceDetails[]> {
+  const query = `*[_type == "services"] {
     _id,
     name,
-    slug,
     image,
-    summary,
     description,
-    propertySizeSqFt,
-    priceRange,
-    completionTime,
     }`;
-  const services: Service[] = await client.fetch(query);
-  services.sort(compareNumbers);
+  const services: ServiceDetails[] = await client.fetch(query);
   return services;
 }

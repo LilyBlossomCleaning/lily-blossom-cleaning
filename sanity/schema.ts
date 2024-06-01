@@ -1,8 +1,9 @@
 import { type SchemaTypeDefinition } from 'sanity';
 
-import service from './schemas/service';
+import services from './schemas/services';
 import serviceDetails from './schemas/serviceDetails';
+import servicePackage from './schemas/servicePackage';
 
 export const schema: { types: SchemaTypeDefinition[] } = {
-  types: [service, serviceDetails],
+  types: [servicePackage, services, serviceDetails],
 };
