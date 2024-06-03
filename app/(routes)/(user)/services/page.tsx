@@ -4,8 +4,11 @@ import getServiceDetails from '@/sanity/lib/getServiceDetails';
 import Image from 'next/image';
 import sanityUrlFor from '@/sanity/lib/sanityUrlFor';
 import BlockContent from '@sanity/block-content-to-react';
+import ServicesCarousel from '@/app/_components/Carousel/ServicesCarousel';
+import getServices from '@/sanity/lib/getServices';
 
-const services = await getServiceDetails();
+const serviceDetails = await getServiceDetails();
+const services = await getServices();
 
 export const metadata: Metadata = {
   title: 'Services | ' + appConfig.organizationData.name,
@@ -42,20 +45,31 @@ export default function page() {
           <div className="absolute bottom-0 w-full h-40 bg-gradient-to-b from-transparent to-white"></div>
         </main>
         <section className="relative grid gap-12 w-full bg-white py-20">
-          {/* <div className="mx-auto max-w-4xl grid justify-items-center gap-8">
-            <ServiceSelector services={services} />
-          </div> */}
           <div className="prose xl:prose-xl mx-auto pt-16 pb-28 px-8">
-            <h3>Included in Our Services</h3>
+            <h2 className="underline decoration-wavy decoration-accent underline-offset-4">
+              Services
+            </h2>
             <p>
               We offer a range of professional cleaning services tailored to
               meet your specific needs. From kitchens to living rooms, and every
               space in between, our dedicated team ensures your home is spotless
-              and welcoming. Included in our services:
+              and welcoming.
+            </p>
+          </div>
+          <ServicesCarousel services={services} />
+          <div className="prose xl:prose-xl mx-auto pt-16 pb-8 px-8">
+            <h2 className="underline decoration-wavy decoration-accent underline-offset-4">
+              Included in Our Services
+            </h2>
+            <p>
+              Our services cover every detail to ensure your home is impeccably
+              clean. From dusting and vacuuming to sanitizing surfaces and deep
+              cleaning specific areas, we provide comprehensive care tailored to
+              your needs.
             </p>
           </div>
           <div className="grid grid-flow-row lg:grid-cols-2 gap-4 mx-auto justify-center w-full max-w-5xl">
-            {services.map((service) => (
+            {serviceDetails.map((service) => (
               <div
                 key={service.name.replaceAll(' ', '')}
                 className="grid grid-rows-[300px_1fr]"
@@ -70,12 +84,12 @@ export default function page() {
                     style={{ width: '100%', height: '100%' }}
                     className="lg:shadow-xl lg:rounded-md"
                   />
-                  <h2 className="absolute bottom-0 left-0 right-0 bg-gl glass px-4 py-2 card-title">
+                  <h2 className="absolute bottom-0 left-0 right-0 glass px-4 py-2 card-title">
                     {service.name}
                   </h2>
                 </div>
                 <div className="card-body">
-                  <div className="prose xl:prose-xl">
+                  <div className="prose prose-sm md:prose-lg xl:prose-xl">
                     <BlockContent blocks={service.description} />
                   </div>
                 </div>
