@@ -5,10 +5,13 @@ import Image from 'next/image';
 import sanityUrlFor from '@/sanity/lib/sanityUrlFor';
 import BlockContent from '@sanity/block-content-to-react';
 import ServicesCarousel from '@/app/_components/Carousel/ServicesCarousel';
-import getServices from '@/sanity/lib/getServices';
+import { sanityFetch } from '@/sanity/lib/client';
+import { ServiceDetails } from '@/app/@types/_types';
+import { groq } from 'next-sanity';
 
 const serviceDetails = await getServiceDetails();
-const services = await getServices();
+export const dynamic = 'force-dynamic';
+export const revalidate = 60;
 
 export const metadata: Metadata = {
   title: 'Services | ' + appConfig.organizationData.name,
@@ -19,7 +22,18 @@ export const metadata: Metadata = {
   keywords: appConfig.seoKeywords,
 };
 
-export default function page() {
+export default async function page() {
+  const services: ServiceDetails[] = await sanityFetch({
+    query: groq`*[_type == "services"] {
+    _id,
+    "slug": slug.current,
+    name,
+    image,
+    description,
+    }`,
+    tags: ['services'],
+  });
+
   return (
     <>
       <div className="relative flex min-h-screen flex-col items-center justify-between">
